@@ -1,0 +1,57 @@
+import turtle
+
+
+
+
+t1 = turtle.Turtle()
+t1.shape("turtle")
+t1.speed(0)
+t1.color("yellow","red")  #filling in shapes
+t1.width(3)
+
+
+
+t2 = turtle.Turtle()
+t2.shape("turtle")
+t2.speed(0)
+t2.width(3)
+t2.color("blue","orange")
+
+t3 = turtle.Turtle()
+t3.shape("turtle")
+t3.speed(0)
+t3.width(3)
+t3.color("red","blue")
+
+t1.penup()                #pen up move turtle anywhere
+t1.goto(150,150)          #put turtle in a specific location
+t1.pendown()              #pen down locate turtle
+
+t2.penup()
+t2.goto(-150,-150)
+t2.pendown()
+
+t3.penup()
+t3.goto(-150,150)
+t3.pendown()
+
+def draw_box(t):
+    t.begin_fill()
+    t.forward(100)
+    t.right(90)
+    t.forward(100)
+    t.right(90)
+    t.forward(100)
+    t.right(90)
+    t.color("red")
+    t.forward(100)
+    t.right(90)
+    t.end_fill()
+    t.right(10)
+turtles = [t1,t2,t3]
+
+for petal in range(36): #for loop [range()]
+    for a_turtle in turtles:
+        draw_box(a_turtle)
+        a_turtle.right(10)
+        
